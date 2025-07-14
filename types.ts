@@ -16,18 +16,18 @@ export interface Education {
 
 export interface Interest {
     name: string;
-    icon: React.FC<React.SVGProps<SVGSVGElement>>;
+    icon: string;
 }
 
 export interface Link {
   name: string;
   url: string;
-  icon: React.FC<React.SVGProps<SVGSVGElement>>;
+  icon: string;
 }
 
 export interface Detail {
   value: string;
-  icon: React.FC<React.SVGProps<SVGSVGElement>>;
+  icon: string;
 }
 
 export interface PersonalInfo {
