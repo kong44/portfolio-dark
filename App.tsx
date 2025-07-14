@@ -7,13 +7,13 @@ import profile_img from '@/assets/photo_2025-07-14_14-15-15.jpg'
 import * as Icons from './components/Icons';
 
 const Card = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => (
-  <div className={`bg-card rounded-2xl p-6 ${className}`}>
+  <div className={`bg-card rounded-2xl p-5 ${className}`}>
     {children}
   </div>
 );
 
 const Tag = ({ children }: { children: React.ReactNode }) => (
-  <div className="bg-tag text-white text-sm px-3 py-1 rounded-md">
+  <div className="bg-black text-light-gray text-sm px-3 py-1 rounded-md">
     {children}
   </div>
 );
@@ -24,29 +24,36 @@ const App: React.FC = () => {
       <main className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
 
         {/* Profile & Bio */}
-        <Card className="lg:col-span-3">
+       
+        <div className="lg:col-span-3">
+        
           <div className="flex flex-col md:flex-row items-start gap-6">
             <img 
               src={profile_img}
-              alt="Sunil Kumar"
-              className="w-32 h-42 md:w-40 md:h-50 rounded-xl object-cover border-4 border-card" 
+              alt="profile"
+              className="w-48 h-[230px] rounded-xl object-cover border-4 border-card" 
             />
             <div className="flex-1">
-              <p className="text-white text-lg leading-relaxed italic">{personalInfo.bio}</p>
-              <div className="mt-6">
-                <h3 className="text-light-gray mb-3">Interests</h3>
-                <div className="flex flex-wrap gap-3">
-                  {interests.map(interest => (
-                    <div key={interest.name} className="flex items-center gap-2 bg-tag text-white text-sm px-4 py-2 rounded-lg">
-                      <interest.icon className="w-5 h-5" />
-                      <span>{interest.name}</span>
-                    </div>
-                  ))}
+              <Card>
+                <p className="text-white text-lg leading-relaxed italic">{personalInfo.bio}</p>
+              </Card>
+              <Card className='mt-6'>
+                <div className="flex items-center">
+                  <h3 className="text-white border-r-2 border-light-gray pr-6 mr-6">Interests</h3>
+                  <div className="flex flex-wrap gap-3">
+                    {interests.map(interest => (
+                      <div key={interest.name} className="flex items-center gap-2 bg-black text-light-gray text-sm px-4 py-2 rounded-lg">
+                        <interest.icon className="w-5 h-5" />
+                        <span>{interest.name}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              </Card>
+              
             </div>
           </div>
-        </Card>
+        </div>
 
         {/* Experience */}
         {experiences.map((exp, index) => (

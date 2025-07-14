@@ -16,31 +16,28 @@ export const interests: Interest[] = [
 export const experiences: Experience[] = [
   {
     title: "Freelancer",
-    role: "Logo/Brand Designer",
-    dates: "2021 - now",
+    role: "Setup Synology Share Folder",
+    dates: "2025",
     points: [
-      "Worked on diverse logo and brand identity projects.",
-      "Collaborated with clients from multiple countries.",
-      "Developed a versatile design skill set.",
-      "Adapted to unique challenges and requirements.",
+      "Worked on config setting up synology for sharing folder to a GA school",
+      "Mapping folder to computer",
     ]
   },
   {
-    title: "Meetzed",
-    role: "Graphic Designer",
-    dates: "2020 - 2021",
+    title: "Job With Baitong Hotel",
+    role: "IT Officer",
+    dates: "2024-Now",
     points: [
-      "Collaboration: Supported Lead Designer on projects.",
-      "Branding: Crafted unique brand identities.",
-      "Tools: Used Illustrator, Photoshop & InDesign.",
+      "Computer maintenance",
+      "Server and Network maintenance",
     ]
   }
 ];
 
 export const education: Education[] = [
-  { degree: "High School", school: "Humanities, Delhi Cantonment, India", year: "2017" },
-  { degree: "Diploma", school: "Animation and Graphic Design, Delhi, India", year: "2017-18" },
-  { degree: "Graduation", school: "Bachelor of fine Arts, IGNOU Delhi, India", year: "2017-21" },
+  { degree: "High School", school: "Hunsen Saang High School", year: "2018" },
+  { degree: "Diploma", school: "Hunsen Saang High School", year: "2015" },
+  { degree: "Graduation", school: "Royal University of Phnom Penh", year: "2023" },
 ];
 
 export const designTools = [Icons.IllustratorIcon, Icons.PhotoshopIcon, Icons.InDesignIcon, Icons.XdIcon];
