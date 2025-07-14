@@ -72,6 +72,9 @@ export const portfolioLinks: Link[] = [
     { name: "Melo Menu", url: "https://melo.hancook.food/", icon: www},
     { name: "Dan's Build", url: "https://www.dansbuild.com/", icon: www},
 ];
+export const playArounds: Link[] = [
+    { name: "Dudu Spin", url: "https://duduchoice.vercel.app", icon: www },
+];
 
 export const details: Detail[] = [
     { value: "26 years", icon: age },

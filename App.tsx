@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { 
-  personalInfo, interests, experiences, education, developmentTools, programmingLanguage, languages, portfolioLinks, details 
+  personalInfo, interests, experiences, education, developmentTools, programmingLanguage, languages, portfolioLinks, details,playArounds
 } from './constants';
 import profile_img from '@/assets/photo_2025-07-14_14-15-15.jpg'
 import * as Icons from './components/Icons';
@@ -113,6 +113,19 @@ const App: React.FC = () => {
             <h3 className="text-light-gray mb-4">Portfolio</h3>
             <div className="flex flex-wrap gap-3">
                 {portfolioLinks.map(item => (
+                    <a href={item.url} key={item.name} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-tag text-white text-sm px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors">
+                        <img src={item.icon} className="w-5 h-5" />
+                        <span>{item.name}</span>
+                    </a>
+                ))}
+            </div>
+        </Card>
+
+        {/* Play Around */}
+        <Card className="lg:col-span-3">
+            <h3 className="text-light-gray mb-4">Play Around</h3>
+            <div className="flex flex-wrap gap-3">
+                {playArounds.map(item => (
                     <a href={item.url} key={item.name} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-tag text-white text-sm px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors">
                         <img src={item.icon} className="w-5 h-5" />
                         <span>{item.name}</span>
