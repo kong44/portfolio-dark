@@ -1,10 +1,11 @@
 
-import React from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import { 
   personalInfo, interests, experiences, education, developmentTools, programmingLanguage, languages, portfolioLinks, details,playArounds
 } from './constants';
 import profile_img from '@/assets/photo_2025-07-14_14-15-15.jpg'
 import * as Icons from './components/Icons';
+import music from './assets/echoes-in-blue-by-tokyo-music-walker-chosic.com_.mp3';
 
 const Card = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => (
   <div className={`bg-card rounded-2xl p-5 ${className}`}>
@@ -18,9 +19,45 @@ const Tag = ({ children }: { children: React.ReactNode }) => (
   </div>
 );
 
+
+
 const App: React.FC = () => {
+const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    const audio = new Audio(music); // Make sure file is in `public/`
+    audio.loop = true;
+    audio.volume = 0.5;
+    audio.play();
+    audioRef.current = audio;
+
+    return () => {
+      audio.pause();
+    };
+  }, []);
+
+  const toggleMusic = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
   return (
     <div className="min-h-screen p-4 sm:p-6 lg:p-8 font-sans">
+       {/* Music Control Button */}
+      <div className="fixed top-4 right-4 z-50">
+        <button
+          onClick={toggleMusic}
+          className="bg-tag text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+        >
+          {isPlaying ? '🔊 Pause Music' : '▶️ Play Music'}
+        </button>
+      </div>
       <main className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
 
         {/* Profile & Bio */}
