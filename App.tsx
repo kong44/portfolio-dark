@@ -3,6 +3,7 @@ import React from 'react';
 import { 
   personalInfo, interests, experiences, education, designTools, editingTools, languages, portfolioLinks, details 
 } from './constants';
+import profile_img from '@/assets/photo_2025-07-14_14-15-15.jpg'
 import * as Icons from './components/Icons';
 
 const Card = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => (
@@ -26,7 +27,7 @@ const App: React.FC = () => {
         <Card className="lg:col-span-3">
           <div className="flex flex-col md:flex-row items-start gap-6">
             <img 
-              src="./assets/photo_2025-07-14_14-15-15.jpg" 
+              src={profile_img}
               alt="Sunil Kumar"
               className="w-32 h-42 md:w-40 md:h-50 rounded-xl object-cover border-4 border-card" 
             />
