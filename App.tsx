@@ -26,12 +26,12 @@ const App: React.FC = () => {
         <Card className="lg:col-span-3">
           <div className="flex flex-col md:flex-row items-start gap-6">
             <img 
-              src="https://avatar.iran.liara.run/public/boy?username=sunil" 
+              src="./assets/photo_2025-07-14_14-15-15.jpg" 
               alt="Sunil Kumar"
-              className="w-32 h-32 md:w-40 md:h-40 rounded-2xl object-cover border-4 border-card" 
+              className="w-32 h-42 md:w-40 md:h-50 rounded-xl object-cover border-4 border-card" 
             />
             <div className="flex-1">
-              <p className="text-white text-lg leading-relaxed">{personalInfo.bio}</p>
+              <p className="text-white text-lg leading-relaxed italic">{personalInfo.bio}</p>
               <div className="mt-6">
                 <h3 className="text-light-gray mb-3">Interests</h3>
                 <div className="flex flex-wrap gap-3">
