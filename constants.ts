@@ -78,7 +78,7 @@ export const playArounds: Link[] = [
 ];
 
 export const details: Detail[] = [
-    { value: "26 years", icon: age },
+    { value: "2* years", icon: age },
     { value: "sokkongchan@gmail.com", icon: mail },
     { value: "086581383", icon: telephone },
     { value: "PhnomPenh", icon: location },
