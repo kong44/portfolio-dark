@@ -67,9 +67,10 @@ export const programmingLanguage = [javascript,css,html,mysql,php]
 export const portfolioLinks: Link[] = [
     { name: "Yuanta Cambodia", url: "https://yuantacambodia.com.kh/index.php", icon: yuanta },
     { name: "Baitong Hotel", url: "https://www.baitonghotel.asia/", icon: baitong },
-    { name: "Hancook", url: "#", icon: www },
+    { name: "Hancook", url: "https://hancook.food/home", icon: www },
     { name: "Yuanta Investment", url: "https://invest.yuantacambodia.com.kh/", icon: yuanta },
     { name: "Melo Menu", url: "https://melo.hancook.food/", icon: www},
+    { name: "Dan's Build", url: "https://www.dansbuild.com/", icon: www},
 ];
 
 export const details: Detail[] = [
