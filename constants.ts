@@ -74,7 +74,7 @@ export const portfolioLinks: Link[] = [
 ];
 export const playArounds: Link[] = [
     { name: "Dudu Spin", url: "https://duduchoice.vercel.app", icon: www },
-    { name: "Tantrei", url: "https://music-steaming.vercel.app", icon: www},
+    { name: "Tantrei", url: "https://music-steaming.vercel.app", icon: music},
 ];
 
 export const details: Detail[] = [
