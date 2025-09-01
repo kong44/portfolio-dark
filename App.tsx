@@ -1,12 +1,13 @@
 
 import React, {useState, useEffect, useRef} from 'react';
 import { 
-  personalInfo, interests, experiences, education, developmentTools, programmingLanguage, languages, portfolioLinks, details,playArounds
+  personalInfo, interests, experiences, education, developmentTools, programmingLanguage, languages, portfolioLinks, details,playArounds, services
 } from './constants';
 import profile_img from '@/assets/photo_2025-07-14_14-15-15.jpg'
 import * as Icons from './components/Icons';
 import music from './assets/echoes-in-blue-by-tokyo-music-walker-chosic.com_.mp3';
-
+import email from './assets/mail.png';
+import telegram from './assets/telephone.png'
 const Card = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => (
   <div className={`bg-card rounded-2xl p-5 ${className}`}>
     {children}
@@ -91,6 +92,35 @@ const [isPlaying, setIsPlaying] = useState(false);
             </div>
           </div>
         </div>
+        
+        {/* Service Offering */}
+        <Card className="lg:col-span-3">
+          <div className='flex flex-col gap-3'>
+            <h1 className='text-xl font-bold pb-3'>Service Offering</h1>
+            { services.map((ser, index)=>(
+              <div key={`${index}_${ser.title}`} className='flex flex-row gap-3'>
+                <img alt={ser.title} src={ser.icon} className='w-7 h-7'/>
+                <div>
+                  <h2 className='text-lg'>{ser.title}</h2>
+                  <p className="text-md text-light-gray">{ser.desc}</p>
+                </div>
+              </div>
+            ))}
+            <p className='font-bold text-lg'>Talk to me</p>
+            <div className="flex flex-wrap gap-3">
+              <a href="https://t.me/kong41"  target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-tag text-white text-sm px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors">
+                  <img src={telegram} className="w-5 h-5" />
+                  <span>Telegram</span>
+              </a>
+              <a href="mailto:sokkongchan@gmail.com"  target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-tag text-white text-sm px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors">
+                  <img src={email} className="w-5 h-5" />
+                  <span>Email</span>
+              </a>
+            </div>
+          </div>
+         
+        </Card>
+
 
         {/* Experience */}
         {experiences.map((exp, index) => (

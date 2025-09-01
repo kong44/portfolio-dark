@@ -1,5 +1,5 @@
 
-import { PersonalInfo, Interest, Experience, Education, Link, Detail } from './types';
+import { PersonalInfo, Interest, Experience, Education, Link, Detail, Service } from './types';
 import * as Icons from './components/Icons';
 import github from './assets/github.png';
 import javascript from './assets/javascript.png';
@@ -21,6 +21,14 @@ import camping from "./assets/camping-tent.png";
 import music from "./assets/music.png";
 import research from "./assets/analytics.png";
 import coding from "./assets/code.png";
+
+import wifi from "./assets/icons8-wifi-96.png";
+import cloud from "./assets/icons8-cloud-96.png";
+import database from "./assets/icons8-database-96.png";
+import globe from "./assets/icons8-globe-50.png";
+import headset from "./assets/icons8-headset-100.png";
+
+import { title } from 'process';
 export const personalInfo: PersonalInfo = {
   name: "Chan Sokkong",
   bio: "Hi, I'm KONG a self-taught web developer, IT officer, and freelancer with 4+ years of experience. I build responsive websites and deliver reliable IT solutions to help businesses run better and grow online."
@@ -31,6 +39,34 @@ export const interests: Interest[] = [
   { name: "Researching", icon: research },
   { name: "Music", icon: music },
   { name: "Camping", icon: camping },
+];
+
+export const services: Service[] = [
+  {
+    title: "Office Wi-Fi setup + maintenance",
+    desc: "Design, install, and maintain reliable office Wi-Fi networks with secure configurations and ongoing support.",
+    icon: wifi,
+  },
+  {
+    title: "Email & Web hosting",
+    desc: "Fast, secure, and reliable hosting for your business emails and websites with custom domains and full support.",
+    icon: cloud,
+  },
+  {
+    title: "Server & folder sharing (Synology)",
+    desc: "Setup and manage Synology NAS for secure file storage, folder sharing, and team collaboration with access control.",
+    icon: database,
+  },
+  {
+    title: "Website development & hosting",
+    desc: "Professional websites with fast, secure hosting and ongoing technical support.",
+    icon: globe,
+  },
+  {
+    title: "IT helpdesk support package",
+    desc: "Dedicated IT support for troubleshooting, maintenance, and staff assistance on demand.",
+    icon: headset,
+  },
 ];
 
 export const experiences: Experience[] = [

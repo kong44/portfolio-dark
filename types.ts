@@ -1,3 +1,4 @@
+import { services } from './constants';
 
 import React from 'react';
 
@@ -33,4 +34,10 @@ export interface Detail {
 export interface PersonalInfo {
     name: string;
     bio: string;
+}
+
+export interface Service {
+  title: string;
+  desc: string;
+  icon: string;
 }
