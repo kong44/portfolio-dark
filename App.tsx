@@ -5,7 +5,7 @@ import {
 } from './constants';
 import profile_img from '@/assets/photo_2025-07-14_14-15-15.jpg'
 import * as Icons from './components/Icons';
-import music from './assets/echoes-in-blue-by-tokyo-music-walker-chosic.com_.mp3';
+import music from './assets/background.webm';
 import email from './assets/mail.png';
 import telegram from './assets/telephone.png'
 const Card = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => (
