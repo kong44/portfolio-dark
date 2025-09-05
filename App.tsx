@@ -138,25 +138,34 @@ const [isPlaying, setIsPlaying] = useState(false);
         </Card>
 
         {/* Experience */}
-        {experiences.map((exp, index) => (
-          <Card
-            key={index}
-            className="lg:col-span-3 even:lg:col-span-2 odd:lg:col-span-1 flex-1"
-          >
-            <div className="flex justify-between items-start mb-2">
-              <div>
-                <h2 className="text-lg font-bold text-white">{exp.title}</h2>
-                <p className="text-light-gray">{exp.role}</p>
+        {experiences.map((exp, index) => {
+          const isLast = index === experiences.length - 1;
+          const isOdd = index % 2 === 0; // 0-based index, so 0,2,4… are even in programming, odd in human counting
+
+          let colSpan = "lg:col-span-1";
+          if (!isLast) {
+            colSpan = isOdd ? "odd:lg:col-span-1" : "even:lg:col-span-2";
+          } else {
+            colSpan = isOdd ? "lg:col-span-3" : "lg:col-span-2"; // last card adjustment
+          }
+
+          return (
+            <Card key={index} className={`${colSpan} flex-1`}>
+              <div className="flex justify-between items-start mb-2">
+                <div>
+                  <h2 className="text-lg font-bold text-white">{exp.title}</h2>
+                  <p className="text-light-gray">{exp.role}</p>
+                </div>
+                <Tag>{exp.dates}</Tag>
               </div>
-              <Tag>{exp.dates}</Tag>
-            </div>
-            <ul className="list-disc list-inside space-y-2 text-light-gray pl-2 mt-4">
-              {exp.points.map((point, i) => (
-                <li key={i}>{point}</li>
-              ))}
-            </ul>
-          </Card>
-        ))}
+              <ul className="list-disc list-inside space-y-2 text-light-gray pl-2 mt-4">
+                {exp.points.map((point, i) => (
+                  <li key={i}>{point}</li>
+                ))}
+              </ul>
+            </Card>
+          );
+        })}
 
         {/* Skills Column */}
         <div className="lg:col-span-1 space-y-6">
