@@ -72,23 +72,44 @@ export const services: Service[] = [
 export const experiences: Experience[] = [
   {
     title: "Freelancer",
-    role: "Setup Synology Share Folder",
+    role: "Synology Setup",
     dates: "2025",
     points: [
-      "Worked on config setting up synology for sharing folder to a GA school",
-      "Mapping folder to computer",
-    ]
+      "Configured Synology shared folders for a school",
+      "Mapped network folders to computers",
+    ],
   },
   {
-    title: "Job With Baitong Hotel",
+    title: "Baitong Hotel",
     role: "IT Officer",
-    dates: "2024-Now",
+    dates: "2024-Present",
     points: [
-      "Computer maintenance",
-      "Server and Network maintenance",
-    ]
-  }
+      "Maintained computers and software",
+      "Managed servers and network systems",
+    ],
+  },
+  {
+    title: "Melos Solution",
+    role: "Full-Stack Web Developer",
+    dates: "2022-2024",
+    points: [
+      "Developed websites using React.js, Next.js, PHP, etc.",
+      "Maintained existing websites and internal systems",
+      "Provided computer maintenance support",
+    ],
+  },
+  {
+    title: "Moha Kruosar IT Association",
+    role: "IT Assistant & Developer",
+    dates: "2020-2021",
+    points: [
+      "Assisted project coordinators",
+      "Provided technical support for systems",
+      "Developed ERP modules with Odoo",
+    ],
+  },
 ];
+
 
 export const education: Education[] = [
   { degree: "High School", school: "Hunsen Saang High School", year: "2018" },
