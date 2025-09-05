@@ -28,6 +28,9 @@ import database from "./assets/icons8-database-96.png";
 import globe from "./assets/icons8-globe-50.png";
 import headset from "./assets/icons8-headset-100.png";
 import docker from "./assets/docker.png";
+import linux from "./assets/linux.png";
+import flutter from "./assets/icons8-flutter-96.png";
+import tailwindcss from "./assets/tailwindcss.png";
 import { title } from 'process';
 export const personalInfo: PersonalInfo = {
   name: "Chan Sokkong",
@@ -127,8 +130,8 @@ export const education: Education[] = [
 ];
 
 export const languages = [english, cambodia];
-export const developmentTools = [github,mysql,figma,docker];
-export const programmingLanguage = [javascript,css,html,mysql,php]
+export const developmentTools = [github,mysql,figma,docker,linux];
+export const programmingLanguage = [javascript,css,html,mysql,php,flutter,tailwindcss];
 
 export const portfolioLinks: Link[] = [
     { name: "Yuanta Cambodia", url: "https://yuantacambodia.com.kh/index.php", icon: yuanta },
