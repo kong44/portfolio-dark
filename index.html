@@ -1,11 +1,30 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image" href="/assets/icon.png" />
+    <link rel="icon" type="image/png" href="/assets/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chan Sokkong | Profile</title>
+
+    <!-- SEO Title & Description -->
+    <title>Chan Sokkong | Freelance Web Developer</title>
+    <meta name="description" content="Hi, I'm Chan Sokkong — a freelance web developer specializing in modern websites, Tailwind CSS, React, and Laravel. Hire me for your next project.">
+    <meta name="keywords" content="Chan Sokkong, web developer, freelance web developer, frontend developer, React developer, Tailwind CSS, Laravel, Cambodia freelancer">
+    <meta name="author" content="Chan Sokkong">
+
+    <!-- Open Graph (Facebook / LinkedIn / Messenger) -->
+    <meta property="og:title" content="Chan Sokkong | Freelance Web Developer" />
+    <meta property="og:description" content="Looking for a freelance web developer? I build modern, responsive websites using React, Tailwind CSS, and Laravel." />
+    <meta property="og:image" content="./assets/seo.jpg" />
+    <meta property="og:url" content="https://kong41.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Chan Sokkong | Freelance Web Developer" />
+    <meta name="twitter:description" content="Freelance web developer specializing in React, Tailwind CSS, and Laravel." />
+    <meta name="twitter:image" content="./assets/seo.jpg" />
+
+    <!-- Tailwind Config -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -23,21 +42,26 @@
         }
       }
     </script>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
-    "react/": "https://esm.sh/react@^19.1.0/",
-    "react": "https://esm.sh/react@^19.1.0"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+
+    <!-- React Import Map -->
+    <script type="importmap">
+    {
+      "imports": {
+        "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+        "react/": "https://esm.sh/react@^19.1.0/",
+        "react": "https://esm.sh/react@^19.1.0"
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="/index.css">
+  </head>
   <body class="bg-black text-gray-100 antialiased">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
