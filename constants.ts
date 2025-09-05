@@ -101,11 +101,20 @@ export const experiences: Experience[] = [
   {
     title: "Moha Kruosar IT Association",
     role: "IT Assistant & Developer",
-    dates: "2020-2021",
+    dates: "2021-2022",
     points: [
       "Assisted project coordinators",
       "Provided technical support for systems",
       "Developed ERP modules with Odoo",
+    ],
+  },
+  {
+    title: "Apprenticeship at KOOMPI",
+    role: "Front-end Web developer",
+    dates: "2020-1/2(2021)",
+    points: [
+      "Learning Front-end website",
+      "Learning to work with a team",
     ],
   },
 ];
