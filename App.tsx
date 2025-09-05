@@ -227,7 +227,7 @@ const [isPlaying, setIsPlaying] = useState(false);
 
         {/* Portfolio */}
         <Card className="lg:col-span-3">
-          <h3 className="text-light-gray mb-4">Portfolio</h3>
+          <h3 className="text-light-gray mb-4">Career Journey</h3>
           <div className="flex flex-wrap gap-3">
             {portfolioLinks.map((item) => (
               <a
