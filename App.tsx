@@ -269,7 +269,8 @@ const [isPlaying, setIsPlaying] = useState(false);
             ))}
           </div>
         </Card>
-        <div className="mt-6 border-t border-gray-700 pt-3 text-xs text-gray-400 flex justify-between col-span-3">
+
+        <div className="mt-6 border-t border-gray-700 pt-3 text-xs text-gray-400 flex justify-between lg:col-span-3">
           <span>© {new Date().getFullYear()} Web Developer</span>
           <a
             href="https://yourwebsite.com"
@@ -280,6 +281,8 @@ const [isPlaying, setIsPlaying] = useState(false);
             Built with ❤️ by KONG
           </a>
         </div>
+     
+        
       </main>
     </div>
   );
