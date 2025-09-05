@@ -273,7 +273,7 @@ const [isPlaying, setIsPlaying] = useState(false);
         <div className="mt-6 border-t border-gray-700 pt-3 text-xs text-gray-400 flex justify-between lg:col-span-3">
           <span>© {new Date().getFullYear()} Software Development Freelancer</span>
           <a
-            href="https://yourwebsite.com"
+            href="https://github.com/kong44"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-gray-200 transition-colors"

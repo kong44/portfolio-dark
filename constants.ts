@@ -112,9 +112,9 @@ export const experiences: Experience[] = [
 
 
 export const education: Education[] = [
+  { degree: "Graduation", school: "Royal University of Phnom Penh", year: "2023" },
   { degree: "High School", school: "Hunsen Saang High School", year: "2018" },
   { degree: "Diploma", school: "Hunsen Saang High School", year: "2015" },
-  { degree: "Graduation", school: "Royal University of Phnom Penh", year: "2023" },
 ];
 
 export const languages = [english, cambodia];
