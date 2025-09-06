@@ -34,7 +34,7 @@ import tailwindcss from "./assets/tailwindcss.png";
 import androidStudio from "./assets/icons8-android-studio-96.png";
 import vscode from "./assets/icons8-visual-studio-code-96.png";
 import canva from "./assets/icons8-canva-96.png";
-import cpanel from "./assets/cPanel-1329545816324085587_512px.png"
+import cpanel from "./assets/cPanel-1329545816324085587_512px.png";
 
 import { title } from 'process';
 export const personalInfo: PersonalInfo = {
