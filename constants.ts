@@ -35,7 +35,7 @@ import androidStudio from "./assets/icons8-android-studio-96.png";
 import vscode from "./assets/icons8-visual-studio-code-96.png";
 import canva from "./assets/icons8-canva-96.png";
 import cpanel from "./assets/cpanel.png";
-
+import etc from "./assets/three-dots.png";
 import { title } from 'process';
 export const personalInfo: PersonalInfo = {
   name: "Chan Sokkong",
@@ -135,8 +135,8 @@ export const education: Education[] = [
 ];
 
 export const languages = [english, cambodia];
-export const developmentTools = [github,mysql,figma,docker,linux,vscode,androidStudio,canva,cpanel];
-export const programmingLanguage = [javascript,css,html,mysql,php,flutter,tailwindcss];
+export const developmentTools = [github,mysql,figma,docker,linux,vscode,androidStudio,canva,cpanel, etc];
+export const programmingLanguage = [javascript,css,html,mysql,php,flutter,tailwindcss, etc];
 
 export const portfolioLinks: Link[] = [
     { name: "Yuanta Cambodia", url: "https://yuantacambodia.com.kh/index.php", icon: yuanta },
