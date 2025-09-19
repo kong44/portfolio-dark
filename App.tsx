@@ -17,6 +17,8 @@ import * as Icons from "./components/Icons";
 import music from "./assets/background.mp3";
 import email from "./assets/mail.png";
 import telegram from "./assets/telephone.png";
+import footerPng from "./assets/footer.png";
+import headerPng from "./assets/—Pngtree—pchum ben frame_8538436.png";
 const Card = ({
   children,
   className = "",
@@ -57,6 +59,7 @@ const App: React.FC = () => {
   };
   return (
     <div className="min-h-screen p-4 sm:p-6 lg:p-8 font-sans">
+      
       {/* Music Control Button */}
       <div className="fixed top-4 right-4 z-50">
         <button
@@ -68,7 +71,12 @@ const App: React.FC = () => {
       </div>
       <main className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Profile & Bio */}
-
+        <div className="lg:col-span-3 relative h-[230px]">
+          <h1 className="text-4xl font-bold text-[#ffc800] uppercase absolute bottom-0 left-1/2 -translate-x-1/2 z-10 text-center">
+            Happy Pchum Ben Day
+          </h1>
+          <img src={headerPng} alt="pchum ben header" className="w-full absolute top-0"/>
+        </div>
         <div className="lg:col-span-3">
           <div className="flex flex-col md:flex-row items-start gap-6">
             <img
@@ -285,37 +293,41 @@ const App: React.FC = () => {
             ))}
           </div>
         </Card>
-
-        <div className="mt-6 border-t border-gray-700 pt-3 text-xs text-gray-400 flex justify-between lg:col-span-3">
-          <span>
-            © {new Date().getFullYear()} Software Development Freelancer
-          </span>
-          <div className="flex gap-3">
-            <a
-              href="https://github.com/kong44"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gray-200 transition-colors"
-            >
-              github
-            </a>
-            <a
-              href="https://khmercoder.com/@kong41"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gray-200 transition-colors"
-            >
-              khmercoder
-            </a>
-            <a
-              href="https://www.khmer24.com/chansokkong"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gray-200 transition-colors"
-            >
-              khmer24
-            </a>
+        <div className="lg:col-span-3 relative">
+          <img src={footerPng} alt="footer pchum ben" className="w-full"/>
+          <div className="w-full mt-6 border-t border-gray-700 py-3 text-xs text-white bg-[#fe7600]/10 flex justify-between absolute bottom-0">
+            <span>
+              © {new Date().getFullYear()} Software Development Freelancer
+            </span>
+            <div className="flex gap-3">
+              <a
+                href="https://github.com/kong44"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-200 transition-colors"
+              >
+                github
+              </a>
+              <a
+                href="https://khmercoder.com/@kong41"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-200 transition-colors"
+              >
+                khmercoder
+              </a>
+              <a
+                href="https://www.khmer24.com/chansokkong"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-200 transition-colors"
+              >
+                khmer24
+              </a>
+            </div>
           </div>
+          
+          
         </div>
       </main>
     </div>
