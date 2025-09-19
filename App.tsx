@@ -19,6 +19,7 @@ import email from "./assets/mail.png";
 import telegram from "./assets/telephone.png";
 import footerPng from "./assets/footer.png";
 import headerPng from "./assets/—Pngtree—pchum ben frame_8538436.png";
+import pchumben from "./assets/pchumben.png";
 const Card = ({
   children,
   className = "",
@@ -69,14 +70,13 @@ const App: React.FC = () => {
           {isPlaying ? "🔊 Pause Music" : "▶️ Play Music"}
         </button>
       </div>
-      <main className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Profile & Bio */}
-        <div className="lg:col-span-3 relative h-[230px]">
-          <h1 className="text-4xl font-bold text-[#ffc800] uppercase absolute bottom-0 left-1/2 -translate-x-1/2 z-10 text-center">
-            Happy Pchum Ben Day
-          </h1>
+      <div className=" relative h-[320px]">
+          <img src={pchumben} alt="pchumben" className="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 w-[400px]"/>
           <img src={headerPng} alt="pchum ben header" className="w-full absolute top-0"/>
         </div>
+      <main className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Profile & Bio */}
+        
         <div className="lg:col-span-3">
           <div className="flex flex-col md:flex-row items-start gap-6">
             <img
