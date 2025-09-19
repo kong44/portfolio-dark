@@ -1,29 +1,36 @@
-
-import React, {useState, useEffect, useRef} from 'react';
-import { 
-  personalInfo, interests, experiences, education, developmentTools, programmingLanguage, languages, portfolioLinks, details,playArounds, services
-} from './constants';
-import profile_img from '@/assets/photo_2025-07-14_14-15-15.jpg'
-import * as Icons from './components/Icons';
-import music from './assets/background.mp3';
-import email from './assets/mail.png';
-import telegram from './assets/telephone.png'
-const Card = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => (
-  <div className={`bg-card rounded-2xl p-5 ${className}`}>
-    {children}
-  </div>
-);
+import React, { useState, useEffect, useRef } from "react";
+import {
+  personalInfo,
+  interests,
+  experiences,
+  education,
+  developmentTools,
+  programmingLanguage,
+  languages,
+  portfolioLinks,
+  details,
+  playArounds,
+  services,
+} from "./constants";
+import profile_img from "@/assets/photo_2025-07-14_14-15-15.jpg";
+import * as Icons from "./components/Icons";
+import music from "./assets/background.mp3";
+import email from "./assets/mail.png";
+import telegram from "./assets/telephone.png";
+const Card = ({
+  children,
+  className = "",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => <div className={`bg-card rounded-2xl p-5 ${className}`}>{children}</div>;
 
 const Tag = ({ children }: { children: React.ReactNode }) => (
-  <div className="bg-black text- text-sm px-3 py-1 rounded-md">
-    {children}
-  </div>
+  <div className="bg-black text- text-sm px-3 py-1 rounded-md">{children}</div>
 );
 
-
-
 const App: React.FC = () => {
-const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
@@ -280,18 +287,36 @@ const [isPlaying, setIsPlaying] = useState(false);
         </Card>
 
         <div className="mt-6 border-t border-gray-700 pt-3 text-xs text-gray-400 flex justify-between lg:col-span-3">
-          <span>© {new Date().getFullYear()} Software Development Freelancer</span>
-          <a
-            href="https://github.com/kong44"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-gray-200 transition-colors"
-          >
-            ៙KONG៚ 
-          </a>
+          <span>
+            © {new Date().getFullYear()} Software Development Freelancer
+          </span>
+          <div className="flex gap-3">
+            <a
+              href="https://github.com/kong44"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-200 transition-colors"
+            >
+              github
+            </a>
+            <a
+              href="https://khmercoder.com/@kong41"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-200 transition-colors"
+            >
+              khmercoder
+            </a>
+            <a
+              href="https://www.khmer24.com/chansokkong"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-200 transition-colors"
+            >
+              khmer24
+            </a>
+          </div>
         </div>
-     
-        
       </main>
     </div>
   );
