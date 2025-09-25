@@ -139,12 +139,12 @@ export const developmentTools = [github,mysql,figma,docker,linux,vscode,androidS
 export const programmingLanguage = [javascript,css,html,mysql,php,flutter,tailwindcss, etc];
 
 export const portfolioLinks: Link[] = [
-    { name: "Yuanta Cambodia", url: "https://yuantacambodia.com.kh/index.php", icon: yuanta },
-    { name: "Baitong Hotel", url: "https://www.baitonghotel.asia/", icon: baitong },
-    { name: "Hancook", url: "https://hancook.food/home", icon: www },
-    { name: "Yuanta Investment", url: "https://invest.yuantacambodia.com.kh/", icon: yuanta },
-    { name: "Melo Menu", url: "https://melo.hancook.food/", icon: www},
-    { name: "Dan's Build", url: "https://www.dansbuild.com/", icon: www},
+    { name: "Yuanta Cambodia", desc:"Company website", url: "https://yuantacambodia.com.kh/index.php", icon: yuanta },
+    { name: "Baitong Hotel", desc:"Hotel website", url: "https://www.baitonghotel.asia/", icon: baitong },
+    { name: "Hancook", desc:"Food delivery website", url: "https://hancook.food/home", icon: www },
+    { name: "Yuanta Investment", desc:"Company website", url: "https://invest.yuantacambodia.com.kh/", icon: yuanta },
+    { name: "Melo Menu", desc:"Digital menu", url: "https://melo.hancook.food/", icon: www},
+    { name: "Dan's Build", desc:"Construction company website", url: "https://www.dansbuild.com/", icon: www},
 ];
 export const playArounds: Play[] = [
     { name: "Dudu Spin", desc: "Spinning Game (Reactjs)", url: "https://duduchoice.vercel.app", icon: www },
