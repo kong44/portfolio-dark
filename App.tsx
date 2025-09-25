@@ -74,7 +74,7 @@ const App: React.FC = () => {
             <img
               src={profile_img}
               alt="profile"
-              className="w-48 h-[230px] rounded-xl object-cover border-4 border-card"
+              className="w-48 h-full rounded-xl object-cover border-4 border-card"
             />
             <div className="flex-1">
               <Card>
