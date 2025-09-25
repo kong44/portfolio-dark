@@ -150,6 +150,10 @@ export const playArounds: Link[] = [
     { name: "Dudu Spin", url: "https://duduchoice.vercel.app", icon: www },
     { name: "Tantrei", url: "https://music-steaming.vercel.app", icon: music},
     { name: "Clock With Radio", url: "https://digital-clock-omega-dun.vercel.app", icon: music},
+    { name: "Chutcha Clone", url: "https://chutcha-clone.vercel.app", icon: www},
+    { name: "Movie Website", url: "https://moviesterkh.vercel.app", icon: www},
+    { name: "Pawnbroker Clone", url: "https://pawnbroker-site.vercel.app", icon: www},
+    { name: "Daangn Clone", url: "https://daangn-clone.vercel.app", icon: www},
 ];
 
 export const details: Detail[] = [
