@@ -1,5 +1,5 @@
 
-import { PersonalInfo, Interest, Experience, Education, Link, Detail, Service } from './types';
+import { PersonalInfo, Interest, Experience, Education, Link, Detail, Service, Play } from './types';
 import * as Icons from './components/Icons';
 import github from './assets/github.png';
 import javascript from './assets/javascript.png';
@@ -146,14 +146,14 @@ export const portfolioLinks: Link[] = [
     { name: "Melo Menu", url: "https://melo.hancook.food/", icon: www},
     { name: "Dan's Build", url: "https://www.dansbuild.com/", icon: www},
 ];
-export const playArounds: Link[] = [
-    { name: "Dudu Spin", url: "https://duduchoice.vercel.app", icon: www },
-    { name: "Tantrei", url: "https://music-steaming.vercel.app", icon: music},
-    { name: "Clock With Radio", url: "https://digital-clock-omega-dun.vercel.app", icon: music},
-    { name: "Chutcha Clone", url: "https://chutcha-clone.vercel.app", icon: www},
-    { name: "Movie Website", url: "https://moviesterkh.vercel.app", icon: www},
-    { name: "Pawnbroker Clone", url: "https://pawnbroker-site.vercel.app", icon: www},
-    { name: "Daangn Clone", url: "https://daangn-clone.vercel.app", icon: www},
+export const playArounds: Play[] = [
+    { name: "Dudu Spin", desc: "Spinning Game (Reactjs)", url: "https://duduchoice.vercel.app", icon: www },
+    { name: "Tantrei", desc: "Music Play with Vuejs", url: "https://music-steaming.vercel.app", icon: music},
+    { name: "Clock With Radio", desc: "Display clock and can play radio", url: "https://digital-clock-omega-dun.vercel.app", icon: music},
+    { name: "Chutcha Clone", desc: "Clone from korean website (Reactjs)", url: "https://chutcha-clone.vercel.app", icon: www},
+    { name: "Movie Website", desc: "Display movie rate", url: "https://moviesterkh.vercel.app", icon: www},
+    { name: "Pawnbroker Clone", desc: "Clone from korean website (Reactjs)", url: "https://pawnbroker-site.vercel.app", icon: www},
+    { name: "Daangn Clone", desc: "Clone from korean website (Reactjs)", url: "https://daangn-clone.vercel.app", icon: www},
 ];
 
 export const details: Detail[] = [

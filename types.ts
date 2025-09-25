@@ -26,6 +26,13 @@ export interface Link {
   icon: string;
 }
 
+export interface Play {
+  name: string;
+  url: string;
+  icon: string;
+  desc: string;
+}
+
 export interface Detail {
   value: string;
   icon: string;

@@ -261,10 +261,17 @@ const App: React.FC = () => {
                 key={item.name}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-tag text-white text-sm px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
-              >
+                className="bg-tag text-white text-sm px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+              > 
+              <div className="flex items-center gap-2">
                 <img src={item.icon} className="w-5 h-5" />
                 <span>{item.name}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-5"></span>
+                <span className="text-light-gray text-xs">{item.desc}</span>
+              </div>
+              
               </a>
             ))}
           </div>
