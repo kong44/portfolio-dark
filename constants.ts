@@ -154,6 +154,7 @@ export const playArounds: Play[] = [
     { name: "Movie Website", desc: "Display movie rate", url: "https://moviesterkh.vercel.app", icon: www},
     { name: "Pawnbroker Clone", desc: "Clone from korean website (Reactjs)", url: "https://pawnbroker-site.vercel.app", icon: www},
     { name: "Daangn Clone", desc: "Clone from korean website (Reactjs)", url: "https://daangn-clone.vercel.app", icon: www},
+    { name: "Discount Calulator", desc: "Easy calulate discount price ", url: "https://discount-calulate.vercel.app", icon: www},
 ];
 
 export const details: Detail[] = [
