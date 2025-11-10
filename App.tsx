@@ -18,7 +18,7 @@ import music from "./assets/background.mp3";
 import email from "./assets/mail.png";
 import telegram from "./assets/telephone.png";
 import "./App.css";
-
+import christmas from "./assets/mr-christmas.webp";
 const Card = ({ children, className = "" }) => (
   <div
     className={`
@@ -82,10 +82,10 @@ const App: React.FC = () => {
       <div className="fixed top-4 right-4 bg-card/0 text-white w-auto p-1 rounded-xl z-50">
         {/* Disc with everything inside */}
         <div className="flex justify-center">
-          <div className="relative md:w-28 md:h-28 w-20 candy-cane shadow-lg sparkle h-20 rounded-full overflow-hidden border-2 border-tag shadow-md flex items-center justify-center">
+          <div className="relative md:w-28 md:h-28 w-20 h-20 rounded-full overflow-hidden border-2 border-tag shadow-md flex items-center justify-center">
             {/* Rotating Image */}
             <img
-              src={profile_img}
+              src={christmas}
               className={`absolute inset-0 w-full h-full object-cover opacity-40 ${
                 isPlaying ? "animate-spin-slow" : ""
               }`}
@@ -94,7 +94,7 @@ const App: React.FC = () => {
             {/* Title + Subtitle Inside Disc */}
             <div className="absolute top-4 text-center">
               {/* <h2 className="text-xs font-bold">Background Music</h2> */}
-              <p className="md:text-[10px] text-[9px] opacity-70">Old Song</p>
+              <p className="md:text-[10px] text-[9px] opacity-70">Christmas</p>
             </div>
 
             {/* Play Button Centered */}
@@ -106,7 +106,7 @@ const App: React.FC = () => {
             </button>
 
             <div className="absolute bottom-4 text-center">
-              <p className="md:text-[10px] text-[9px] opacity-70">Sin Sisamuth</p>
+              <p className="md:text-[10px] text-[9px] opacity-70">Jingle Bells</p>
             </div>
           </div>
         </div>
