@@ -62,7 +62,7 @@ const App: React.FC = () => {
       <div className="fixed top-4 right-4 bg-card/0 text-white w-auto p-1 rounded-xl z-50">
         {/* Disc with everything inside */}
         <div className="flex justify-center">
-          <div className="relative w-28 h-28 rounded-full overflow-hidden border-2 border-tag shadow-md flex items-center justify-center">
+          <div className="relative md:w-28 md:h-28 w-20 h-20 rounded-full overflow-hidden border-2 border-tag shadow-md flex items-center justify-center">
             {/* Rotating Image */}
             <img
               src={profile_img}
@@ -74,19 +74,19 @@ const App: React.FC = () => {
             {/* Title + Subtitle Inside Disc */}
             <div className="absolute top-4 text-center">
               {/* <h2 className="text-xs font-bold">Background Music</h2> */}
-              <p className="text-[10px] opacity-70">Old Song</p>
+              <p className="md:text-[10px] text-[9px] opacity-70">Old Song</p>
             </div>
 
             {/* Play Button Centered */}
             <button
               onClick={toggleMusic}
-              className="text-white p-2 relative z-10 transition opacity-70"
+              className="text-white p-2 relative z-10 transition opacity-70 md:text-[10px] text-[9px]"
             >
-              {isPlaying ? "⏸" : "►"}
+              {isPlaying ? "❚❚" : "▶"}
             </button>
 
             <div className="absolute bottom-4 text-center">
-              <p className="text-[10px] opacity-70">Sin Sisamuth</p>
+              <p className="md:text-[10px] text-[9px] opacity-70">Sin Sisamuth</p>
             </div>
           </div>
         </div>
