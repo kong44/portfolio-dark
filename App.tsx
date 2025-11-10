@@ -48,7 +48,8 @@ const App: React.FC = () => {
     audioRef.current = audio;
 
     return () => {
-      audio.pause();
+      audio.play();
+      setIsPlaying(true);
     };
   }, []);
 
