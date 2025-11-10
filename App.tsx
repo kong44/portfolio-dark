@@ -39,7 +39,7 @@ const App: React.FC = () => {
     const audio = new Audio(music); // Make sure file is in `public/`
     audio.loop = true;
     audio.volume = 0.5;
-    audio.play();
+    // audio.play();
     audioRef.current = audio;
 
     return () => {
