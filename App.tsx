@@ -19,13 +19,17 @@ import email from "./assets/mail.png";
 import telegram from "./assets/telephone.png";
 import "./App.css";
 
-const Card = ({
-  children,
-  className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => <div className={`bg-card rounded-2xl p-5 ${className}`}>{children}</div>;
+const Card = ({ children, className = "" }) => (
+  <div
+    className={`
+     rounded-2xl p-5 mb-4 
+    candy-cane shadow-lg sparkle
+    ${className}
+  `}
+  >
+    {children}
+  </div>
+);
 
 const Tag = ({ children }: { children: React.ReactNode }) => (
   <div className="bg-black text- text-sm px-3 py-1 rounded-md">{children}</div>
@@ -40,6 +44,7 @@ const App: React.FC = () => {
     audio.loop = true;
     audio.volume = 0.5;
     audio.play();
+    setIsPlaying(true);
     audioRef.current = audio;
 
     return () => {
@@ -59,10 +64,25 @@ const App: React.FC = () => {
   };
   return (
     <div className="min-h-screen p-4 sm:p-6 lg:p-8 font-sans">
+      {/* ❄️ Snow Falling */}
+      {Array.from({ length: 25 }).map((_, i) => (
+        <div
+          key={i}
+          className="snowflake"
+          style={{
+            left: Math.random() * 100 + "vw",
+            animationDuration: 5 + Math.random() * 6 + "s",
+            animationDelay: Math.random() * 5 + "s",
+          }}
+        >
+          ❄
+        </div>
+      ))}
+
       <div className="fixed top-4 right-4 bg-card/0 text-white w-auto p-1 rounded-xl z-50">
         {/* Disc with everything inside */}
         <div className="flex justify-center">
-          <div className="relative md:w-28 md:h-28 w-20 h-20 rounded-full overflow-hidden border-2 border-tag shadow-md flex items-center justify-center">
+          <div className="relative md:w-28 md:h-28 w-20 candy-cane shadow-lg sparkle h-20 rounded-full overflow-hidden border-2 border-tag shadow-md flex items-center justify-center">
             {/* Rotating Image */}
             <img
               src={profile_img}
@@ -100,7 +120,7 @@ const App: React.FC = () => {
             <img
               src={profile_img}
               alt="profile"
-              className="w-48 h-full rounded-xl object-cover border-4 border-card"
+              className="w-48 h-full rounded-xl object-cover border-4 border-card candy-cane shadow-lg sparkle"
             />
             <div className="flex-1">
               <Card>
@@ -117,7 +137,7 @@ const App: React.FC = () => {
                     {interests.map((interest) => (
                       <div
                         key={interest.name}
-                        className="flex items-center gap-2 bg-black text-light-gray text-sm px-4 py-2 rounded-lg"
+                        className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-xl christmas-glow"
                       >
                         <img src={interest.icon} className="w-5 h-5" />
                         <span>{interest.name}</span>
@@ -133,7 +153,7 @@ const App: React.FC = () => {
         {/* Service Offering */}
         <Card className="lg:col-span-3">
           <div className="flex flex-col gap-3">
-            <h1 className="text-xl font-bold pb-3">Service Offering</h1>
+            <h1 className="text-xl font-bold pb-3 text-red-400">🎄Service Offering</h1>
             {services.map((ser, index) => (
               <div
                 key={`${index}_${ser.title}`}
@@ -186,7 +206,7 @@ const App: React.FC = () => {
             <Card key={index} className={`${colSpan} flex-1`}>
               <div className="flex justify-between items-start mb-2">
                 <div>
-                  <h2 className="text-lg font-bold text-white">{exp.title}</h2>
+                  <h2 className="text-lg font-bold text-white">🎁{exp.title}</h2>
                   <p className="text-light-gray">{exp.role}</p>
                 </div>
                 <Tag>{exp.dates}</Tag>
@@ -203,7 +223,7 @@ const App: React.FC = () => {
         {/* Skills Column */}
         <div className="lg:col-span-1 space-y-6">
           <Card>
-            <h3 className="text-light-gray mb-4">Programming Language</h3>
+            <h3 className="mb-4 text-green-300">🎁Programming Language</h3>
             <div className="flex flex-wrap gap-4">
               {programmingLanguage.map((item, index) => (
                 <img
@@ -215,7 +235,7 @@ const App: React.FC = () => {
             </div>
           </Card>
           <Card>
-            <h3 className="text-light-gray mb-4">Development Tools</h3>
+            <h3 className="mb-4 text-green-300">🎁Development Tools</h3>
             <div className="flex flex-wrap gap-4">
               {developmentTools.map((item, index) => (
                 <img key={`dev_${index}`} src={item} className="w-8 h-8" />
@@ -223,7 +243,7 @@ const App: React.FC = () => {
             </div>
           </Card>
           <Card>
-            <h3 className="text-light-gray mb-4">Languages</h3>
+            <h3 className="mb-4 text-green-300">🎁Languages</h3>
             <div className="flex flex-wrap gap-4">
               {languages.map((item, index) => (
                 <img
@@ -260,7 +280,7 @@ const App: React.FC = () => {
 
         {/* Portfolio */}
         <Card className="lg:col-span-3">
-          <h3 className="text-light-gray mb-4">Career Journey</h3>
+          <h3 className="text-green-200 mb-4">❄️ Career Journey</h3>
           <div className="flex flex-wrap gap-3">
             {portfolioLinks.map((item) => (
               <a
@@ -268,7 +288,7 @@ const App: React.FC = () => {
                 key={item.name}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-tag text-white text-sm px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+                className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-xl christmas-glow"
               >
                 <div className="flex items-center gap-2">
                   <img src={item.icon} className="w-5 h-5" />
@@ -285,7 +305,7 @@ const App: React.FC = () => {
 
         {/* Play Around */}
         <Card className="lg:col-span-3">
-          <h3 className="text-light-gray mb-4">Play Around</h3>
+          <h3 className="text-green-200 mb-4">❄️ Play Around</h3>
           <div className="flex flex-wrap gap-3">
             {playArounds.map((item) => (
               <a
@@ -293,7 +313,7 @@ const App: React.FC = () => {
                 key={item.name}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-tag text-white text-sm px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+                className="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-xl christmas-glow"
               >
                 <div className="flex items-center gap-2">
                   <img src={item.icon} className="w-5 h-5" />
@@ -323,10 +343,12 @@ const App: React.FC = () => {
             ))}
           </div>
         </Card>
-
         <div className="mt-6 border-t border-gray-700 pt-3 text-xs text-gray-400 flex justify-between lg:col-span-3">
           <span>
             © {new Date().getFullYear()} Software Development Freelancer
+          </span>
+          <span className="text-center text-green-200">
+            🎅 Merry Christmas & Happy New Year {new Date().getFullYear()} 🎄
           </span>
           <div className="flex gap-3">
             <a
