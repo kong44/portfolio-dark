@@ -17,6 +17,8 @@ import * as Icons from "./components/Icons";
 import music from "./assets/background.mp3";
 import email from "./assets/mail.png";
 import telegram from "./assets/telephone.png";
+import "./App.css";
+
 const Card = ({
   children,
   className = "",
@@ -57,15 +59,39 @@ const App: React.FC = () => {
   };
   return (
     <div className="min-h-screen p-4 sm:p-6 lg:p-8 font-sans">
-      {/* Music Control Button */}
-      <div className="fixed top-4 right-4 z-50">
-        <button
-          onClick={toggleMusic}
-          className="bg-tag text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
-        >
-          {isPlaying ? "🔊 Pause Music" : "▶️ Play Music"}
-        </button>
+      <div className="fixed top-4 right-4 bg-card/0 text-white w-auto p-1 rounded-xl z-50">
+        {/* Disc with everything inside */}
+        <div className="flex justify-center">
+          <div className="relative w-28 h-28 rounded-full overflow-hidden border-2 border-tag shadow-md flex items-center justify-center">
+            {/* Rotating Image */}
+            <img
+              src={profile_img}
+              className={`absolute inset-0 w-full h-full object-cover opacity-40 ${
+                isPlaying ? "animate-spin-slow" : ""
+              }`}
+            />
+
+            {/* Title + Subtitle Inside Disc */}
+            <div className="absolute top-4 text-center">
+              {/* <h2 className="text-xs font-bold">Background Music</h2> */}
+              <p className="text-[10px] opacity-70">Old Song</p>
+            </div>
+
+            {/* Play Button Centered */}
+            <button
+              onClick={toggleMusic}
+              className="text-white p-2 relative z-10 transition opacity-70"
+            >
+              {isPlaying ? "⏸" : "►"}
+            </button>
+
+            <div className="absolute bottom-4 text-center">
+              <p className="text-[10px] opacity-70">Sin Sisamuth</p>
+            </div>
+          </div>
+        </div>
       </div>
+
       <main className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Profile & Bio */}
 
@@ -243,16 +269,15 @@ const App: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-tag text-white text-sm px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
-              > 
-              <div className="flex items-center gap-2">
-                <img src={item.icon} className="w-5 h-5" />
-                <span>{item.name}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="w-5"></span>
-                <span className="text-light-gray text-xs">{item.desc}</span>
-              </div>
-              
+              >
+                <div className="flex items-center gap-2">
+                  <img src={item.icon} className="w-5 h-5" />
+                  <span>{item.name}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-5"></span>
+                  <span className="text-light-gray text-xs">{item.desc}</span>
+                </div>
               </a>
             ))}
           </div>
@@ -269,16 +294,15 @@ const App: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-tag text-white text-sm px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
-              > 
-              <div className="flex items-center gap-2">
-                <img src={item.icon} className="w-5 h-5" />
-                <span>{item.name}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="w-5"></span>
-                <span className="text-light-gray text-xs">{item.desc}</span>
-              </div>
-              
+              >
+                <div className="flex items-center gap-2">
+                  <img src={item.icon} className="w-5 h-5" />
+                  <span>{item.name}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-5"></span>
+                  <span className="text-light-gray text-xs">{item.desc}</span>
+                </div>
               </a>
             ))}
           </div>
