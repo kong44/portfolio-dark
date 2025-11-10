@@ -44,12 +44,10 @@ const App: React.FC = () => {
     audio.loop = true;
     audio.volume = 0.5;
     audio.play();
-    setIsPlaying(true);
     audioRef.current = audio;
 
     return () => {
-      audio.play();
-      setIsPlaying(true);
+      audio.pause();
     };
   }, []);
 
